@@ -99,19 +99,31 @@ public interface ouraniaaltarConfig extends Config
 	default int minEnergy() { return 35; }
 
 	@ConfigItem(
-			keyName = "foodType",
-			name = "Food",
-			description = "Type of food to eat",
+			keyName = "instructions2",
+			name = "",
+			description = "Instructions. Don't enter anything into this field",
 			position = 14
 	)
-	default ouraniaaltarFood foodType() { return ouraniaaltarFood.MONKFISH; }
+	default String instructions2()
+	{
+		return "Here are some common IDs: " +
+				"Karambwan: 3144, Shark: 385, Monkfish: 7946.";
+	}
+
+	@ConfigItem(
+			keyName = "foodType",
+			name = "Food ID",
+			description = "ID of food to eat",
+			position = 15
+	)
+	default int foodId() { return 7946; }
 
 
 	@ConfigItem(
 			keyName = "minHealth",
 			name = "Minimum Health",
 			description = "Minimum health before food eaten",
-			position = 15
+			position = 16
 	)
 	default int minHealth() { return 65; }
 
