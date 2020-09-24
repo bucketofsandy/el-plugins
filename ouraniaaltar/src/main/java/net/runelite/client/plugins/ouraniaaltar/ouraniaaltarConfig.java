@@ -106,7 +106,7 @@ public interface ouraniaaltarConfig extends Config
 	)
 	default String instructions2()
 	{
-		return "Here are some common IDs: " +
+		return "Common food IDs: " +
 				"Karambwan: 3144, Shark: 385, Monkfish: 7946.";
 	}
 
