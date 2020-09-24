@@ -393,14 +393,71 @@ public class ouraniaaltarPlugin extends Plugin
 			}
 		}
 		if(checkHitpoints()<config.minHealth()){
+			if(config.foodType().name() == "LOBSTER") {
+				if(utils.inventoryContains(379)){
+					targetMenu = new MenuEntry("Eat","<col=ff9040>Lobster</col>",9,1007,utils.getInventoryWidgetItem(379).getIndex(),983043,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "EATING_LOBSTER";
+				} else {
+					targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(379).getIndex(),786444,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "WITHDRAW_LOBSTER";
+				}
+			}
+			else if(config.foodType().name() == "SWORDFISH") {
+				if(utils.inventoryContains(373)){
+					targetMenu = new MenuEntry("Eat","<col=ff9040>Swordfish</col>",9,1007,utils.getInventoryWidgetItem(373).getIndex(),983043,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "EATING_SWORDFISH";
+				} else {
+					targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(373).getIndex(),786444,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "WITHDRAW_SWORDFISH";
+				}
+			}
+			else if(config.foodType().name() == "MONKFISH") {
+				if(utils.inventoryContains(7946)){
+					targetMenu = new MenuEntry("Eat","<col=ff9040>Monkfish</col>",9,1007,utils.getInventoryWidgetItem(7946).getIndex(),983043,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "EATING_MONKFISH";
+				} else {
+					targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(7946).getIndex(),786444,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "WITHDRAW_MONKFISH";
+				}
+			}
+			else if(config.foodType().name() == "COOKED_KARAMBWAN") {
 			if(utils.inventoryContains(3144)){
 				targetMenu = new MenuEntry("Eat","<col=ff9040>Cooked karambwan</col>",9,1007,utils.getInventoryWidgetItem(3144).getIndex(),983043,false);
 				utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
-				return "EATING_KARAM";
+				return "EATING_KARAMBWAN";
 			} else {
 				targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(3144).getIndex(),786444,false);
 				utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
-				return "WITHDRAW_KARAM";
+				return "WITHDRAW_KARAMBWAN";
+			}
+		}
+			else if(config.foodType().name() == "SHARK") {
+				if(utils.inventoryContains(385)){
+					targetMenu = new MenuEntry("Eat","<col=ff9040>Shark</col>",9,1007,utils.getInventoryWidgetItem(385).getIndex(),983043,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "EATING_SHARK";
+				} else {
+					targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(385).getIndex(),786444,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "WITHDRAW_SHARK";
+				}
+			}
+			else if(config.foodType().name() == "ANGLERFISH") {
+				if(utils.inventoryContains(13441)){
+					targetMenu = new MenuEntry("Eat","<col=ff9040>Anglerfish</col>",9,1007,utils.getInventoryWidgetItem(13441).getIndex(),983043,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "EATING_ANGLERFISH";
+				} else {
+					targetMenu = new MenuEntry("Withdraw-1","Withdraw-1",1,57,utils.getBankItemWidget(13441).getIndex(),786444,false);
+					utils.delayMouseClick(getRandomNullPoint(),sleepDelay());
+					return "WITHDRAW_ANGLERFISH";
+				}
 			}
 		}
 		if(!config.giantPouch()){

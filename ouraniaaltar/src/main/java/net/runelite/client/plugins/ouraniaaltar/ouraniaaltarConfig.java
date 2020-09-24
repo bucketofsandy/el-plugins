@@ -42,7 +42,7 @@ public interface ouraniaaltarConfig extends Config
 	)
 	default String instructions()
 	{
-		return "Make sure you have Stamina (1)s, Karambwans, Essence, Air Runes and Cosmic Runes in your bank. " +
+		return "Make sure you have Stamina (1)s, food, Essence, Air Runes and Cosmic Runes in your bank. " +
 				"Equip a staff that gives earth runes and make sure you have ourania teleport and banking runes in your pouch.";
 	}
 
@@ -99,10 +99,19 @@ public interface ouraniaaltarConfig extends Config
 	default int minEnergy() { return 35; }
 
 	@ConfigItem(
+			keyName = "foodType",
+			name = "Food",
+			description = "Type of food to eat",
+			position = 14
+	)
+	default ouraniaaltarFood foodType() { return ouraniaaltarFood.MONKFISH; }
+
+
+	@ConfigItem(
 			keyName = "minHealth",
 			name = "Minimum Health",
 			description = "Minimum health before food eaten",
-			position = 14
+			position = 15
 	)
 	default int minHealth() { return 65; }
 
